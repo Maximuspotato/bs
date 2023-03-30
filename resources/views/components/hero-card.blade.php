@@ -10,6 +10,8 @@
                                 About Us
                             @elseif ($page == 'events')
                                 Events
+                            @elseif ($page == 'blog')
+                                Blog
                             @endif
                         </h2>
                     </div>
