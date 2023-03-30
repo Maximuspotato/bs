@@ -57,7 +57,7 @@
                                             <li><a href="{{url('/')}}">Home</a></li>
                                             <li><a href="about">About</a></li>
                                             <!-- <li><a href="spakers.html">Spakers</a></li> -->
-                                            <li><a href="events.html">Events</a></li>
+                                            <li><a href="events">Events</a></li>
                                             <li><a href="blog.html">Blog</a></li>
                                             <li><a href="contact.html">Contact</a></li>
                                         </ul>

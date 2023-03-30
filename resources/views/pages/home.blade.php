@@ -123,14 +123,14 @@
         </div>
     </section>
     <!-- About Law End-->
-    <x-events-card/>
+    <x-events-card :page='$page'/>
 
     <x-gallery-card/>
 
     <!--? Brand Area Start-->
     <section class="work-company section-padding30" style="background: #005E6D;">
         <div class="container">
-                <img src="assets/img/gallery/partner.png" alt="" height="800" width="100%">
+            <img src="assets/img/gallery/partner.png" alt="" height="800" width="100%">
         </div>
     </section>
     <!-- Brand Area End-->

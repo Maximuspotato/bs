@@ -8,6 +8,8 @@
                         <h2>
                             @if ($page == 'about')
                                 About Us
+                            @elseif ($page == 'events')
+                                Events
                             @endif
                         </h2>
                     </div>

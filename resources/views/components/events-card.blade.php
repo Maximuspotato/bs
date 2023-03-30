@@ -1,5 +1,8 @@
 <section class="accordion fix section-padding30">
     <div class="container">
+        @if ($page == 'events')
+            <br><br>
+        @else
         <div class="row justify-content-center">
             <div class="col-xl-5 col-lg-6 col-md-6">
                 <!-- Section Tittle -->
@@ -8,6 +11,7 @@
                 </div> 
             </div>
         </div>
+        @endif
         <div class="row events-row">
            <div class="col-lg-11">
                 <div class="properties__button mb-40">

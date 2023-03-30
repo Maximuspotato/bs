@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 //Routes to the different pages
 Route::get('/', [PagesController::class, 'home']);
 Route::get('/about', [PagesController::class, 'about']);
+Route::get('/events', [PagesController::class, 'events']);
