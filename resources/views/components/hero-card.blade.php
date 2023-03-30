@@ -12,6 +12,8 @@
                                 Events
                             @elseif ($page == 'blog')
                                 Blog
+                            @elseif ($page == 'contact')
+                                Contact
                             @endif
                         </h2>
                     </div>
