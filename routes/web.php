@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AttendeesController;
 use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +20,7 @@ Route::get('/about', [PagesController::class, 'about']);
 Route::get('/events', [PagesController::class, 'events']);
 Route::get('/blog', [PagesController::class, 'blog']);
 Route::get('/contact', [PagesController::class, 'contact']);
+
+//show attendees register form
+Route::get('/attendees/register', [AttendeesController::class, 'register']);
+Route::post('/attendees', [AttendeesController::class, 'store']);

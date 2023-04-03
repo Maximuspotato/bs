@@ -14,6 +14,8 @@
                                 Blog
                             @elseif ($page == 'contact')
                                 Contact
+                            @elseif ($page == 'register')
+                                Register
                             @endif
                         </h2>
                     </div>

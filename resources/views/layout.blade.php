@@ -7,21 +7,34 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{{url('/')}}/assets/img/favicon.ico">
 
 	<!-- CSS here -->
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="assets/css/slicknav.css">
-    <link rel="stylesheet" href="assets/css/flaticon.css">
-    <link rel="stylesheet" href="assets/css/gijgo.css">
-	<link rel="stylesheet" href="assets/css/animate.min.css">
-	<link rel="stylesheet" href="assets/css/magnific-popup.css">
-	<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-	<link rel="stylesheet" href="assets/css/themify-icons.css">
-	<link rel="stylesheet" href="assets/css/slick.css">
-	<link rel="stylesheet" href="assets/css/nice-select.css">
-	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="{{url('/')}}/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{{url('/')}}/assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="{{url('/')}}/assets/css/slicknav.css">
+    <link rel="stylesheet" href="{{url('/')}}/assets/css/flaticon.css">
+    <link rel="stylesheet" href="{{url('/')}}/assets/css/gijgo.css">
+	<link rel="stylesheet" href="{{url('/')}}/assets/css/animate.min.css">
+	<link rel="stylesheet" href="{{url('/')}}/assets/css/magnific-popup.css">
+	<link rel="stylesheet" href="{{url('/')}}/assets/css/fontawesome-all.min.css">
+	<link rel="stylesheet" href="{{url('/')}}/assets/css/themify-icons.css">
+	<link rel="stylesheet" href="{{url('/')}}/assets/css/slick.css">
+	<link rel="stylesheet" href="{{url('/')}}/assets/css/nice-select.css">
+	<link rel="stylesheet" href="{{url('/')}}/assets/css/style.css">    
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        laravel: "#51ef2d",
+                    },
+                },
+            },
+        };
+    </script>
 </head>
 <body>
     <!-- ? Preloader Start -->
@@ -30,7 +43,7 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/logo.png" alt="">
+                    <img src="{{url('/')}}/assets/img/logo/logo.png" alt="">
                 </div>
             </div>
         </div>
@@ -45,7 +58,7 @@
                         <!-- Logo -->
                         <div class="col-xl-2 col-lg-2 col-md-1">
                             <div class="logo">
-                                <a href="{{url('/')}}"><img src="assets/img/logo/logo.png" alt="" width="300" height="80"></a>
+                                <a href="{{url('/')}}"><img src="{{url('/')}}/assets/img/logo/logo.png" alt="" width="300" height="80"></a>
                             </div>
                         </div>
                         <div class="col-xl-10 col-lg-10 col-md-10">
@@ -55,16 +68,15 @@
                                     <nav>
                                         <ul id="navigation">
                                             <li><a href="{{url('/')}}">Home</a></li>
-                                            <li><a href="about">About</a></li>
-                                            <!-- <li><a href="spakers.html">Spakers</a></li> -->
-                                            <li><a href="events">Events</a></li>
-                                            <li><a href="blog">Blog</a></li>
-                                            <li><a href="contact">Contact</a></li>
+                                            <li><a href="{{url('/')}}/about">About</a></li>
+                                            <li><a href="{{url('/')}}/events">Events</a></li>
+                                            <li><a href="{{url('/')}}/blog">Blog</a></li>
+                                            <li><a href="{{url('/')}}/contact">Contact</a></li>
                                         </ul>
                                     </nav>
                                 </div>
                                 <div class="header-right-btn f-right d-none d-lg-block ml-30">
-                                    <a href="#" class="btn header-btn">Register</a>
+                                    <a href="{{url('/')}}/attendees/register" class="btn header-btn">Register</a>
                                 </div>
                             </div>
                         </div>   
@@ -142,7 +154,7 @@
                                      onblur="this.placeholder = ' Email Address '">
                                      <div class="form-icon">
                                          <button type="submit" name="submit" id="newsletter-submit"
-                                         class="email_icon newsletter-submit button-contactForm"><img src="assets/img/gallery/form.png" alt=""></button>
+                                         class="email_icon newsletter-submit button-contactForm"><img src="{{url('/')}}/assets/img/gallery/form.png" alt=""></button>
                                      </div>
                                      <div class="mt-10 info"></div>
                                  </form>
@@ -156,9 +168,9 @@
            <div class="row footer-wejed justify-content-between">
                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                     <!-- logo -->
-                    <div class="footer-logo mb-20">
+                    {{-- <div class="footer-logo mb-20">
                     <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
                 <div class="footer-tittle-bottom">
@@ -212,42 +224,44 @@
 
 <!-- JS here -->
 
-<script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="{{url('/')}}/assets/js/vendor/modernizr-3.5.0.min.js"></script>
 <!-- Jquery, Popper, Bootstrap -->
-<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-<script src="./assets/js/popper.min.js"></script>
-<script src="./assets/js/bootstrap.min.js"></script>
+<script src="{{url('/')}}/assets/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="{{url('/')}}/assets/js/popper.min.js"></script>
+<script src="{{url('/')}}/assets/js/bootstrap.min.js"></script>
 <!-- Jquery Mobile Menu -->
-<script src="./assets/js/jquery.slicknav.min.js"></script>
+<script src="{{url('/')}}/assets/js/jquery.slicknav.min.js"></script>
 
 <!-- Jquery Slick , Owl-Carousel Plugins -->
-<script src="./assets/js/owl.carousel.min.js"></script>
-<script src="./assets/js/slick.min.js"></script>
+<script src="{{url('/')}}/assets/js/owl.carousel.min.js"></script>
+<script src="{{url('/')}}/assets/js/slick.min.js"></script>
 <!-- One Page, Animated-HeadLin -->
-<script src="./assets/js/wow.min.js"></script>
-<script src="./assets/js/animated.headline.js"></script>
-<script src="./assets/js/jquery.magnific-popup.js"></script>
+<script src="{{url('/')}}/assets/js/wow.min.js"></script>
+<script src="{{url('/')}}/assets/js/animated.headline.js"></script>
+<script src="{{url('/')}}/assets/js/jquery.magnific-popup.js"></script>
 
 <!-- Date Picker -->
-<script src="./assets/js/gijgo.min.js"></script>
+<script src="{{url('/')}}/assets/js/gijgo.min.js"></script>
 <!-- Nice-select, sticky -->
-<script src="./assets/js/jquery.nice-select.min.js"></script>
-<script src="./assets/js/jquery.sticky.js"></script>
+<script src="{{url('/')}}/assets/js/jquery.nice-select.min.js"></script>
+<script src="{{url('/')}}/assets/js/jquery.sticky.js"></script>
 
 <!-- counter , waypoint -->
-<script src="./assets/js/jquery.counterup.min.js"></script>
-<script src="./assets/js/waypoints.min.js"></script>
-<script src="./assets/js/jquery.countdown.min.js"></script>
+<script src="{{url('/')}}/assets/js/jquery.counterup.min.js"></script>
+<script src="{{url('/')}}/assets/js/waypoints.min.js"></script>
+<script src="{{url('/')}}/assets/js/jquery.countdown.min.js"></script>
 <!-- contact js -->
-<script src="./assets/js/contact.js"></script>
-<script src="./assets/js/jquery.form.js"></script>
-<script src="./assets/js/jquery.validate.min.js"></script>
-<script src="./assets/js/mail-script.js"></script>
-<script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="{{url('/')}}/assets/js/contact.js"></script>
+<script src="{{url('/')}}/assets/js/jquery.form.js"></script>
+<script src="{{url('/')}}/assets/js/jquery.validate.min.js"></script>
+<script src="{{url('/')}}/assets/js/mail-script.js"></script>
+<script src="{{url('/')}}/assets/js/jquery.ajaxchimp.min.js"></script>
 
 <!-- Jquery Plugins, main Jquery -->	
-<script src="./assets/js/plugins.js"></script>
-<script src="./assets/js/main.js"></script>
+<script src="{{url('/')}}/assets/js/plugins.js"></script>
+<script src="{{url('/')}}/assets/js/main.js"></script>
+
+<x-flash-message />
 
 </body>
 </html>

@@ -221,7 +221,7 @@
 
     // Use this for real timer date
     /*  var timerdate = "2020/01/01"; */
-    var timerdate = "03/30/2023"
+    var timerdate = "04/30/2023"
 
 	$("#countdown").countdown(timerdate, function(event) {
         $(this).html(event.strftime("<div class='cd-item'><span>%D</span><p>Days</p> </div>" + "<div class='cd-item'><span>%H</span><p>Hrs</p> </div>" + "<div class='cd-item'><span>%M</span><p>Min</p> </div>" + "<div class='cd-item'><span>%S</span><p>Sec</p> </div>"));
@@ -236,5 +236,13 @@
 // 15. Time Picker
   $('#timepicker').timepicker();
 
+  $("#mpesa").hide();
+  $("#paid").change(function() {
+    if(this.checked) {
+      $("#mpesa").show();
+    }else{
+      $("#mpesa").hide();
+    }
+});
 
 })(jQuery);
