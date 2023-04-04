@@ -22,7 +22,7 @@
 	<link rel="stylesheet" href="{{url('/')}}/assets/css/slick.css">
 	<link rel="stylesheet" href="{{url('/')}}/assets/css/nice-select.css">
 	<link rel="stylesheet" href="{{url('/')}}/assets/css/style.css">    
-    <script src="//unpkg.com/alpinejs" defer></script>
+    {{-- <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -34,7 +34,7 @@
                 },
             },
         };
-    </script>
+    </script> --}}
 </head>
 <body>
     <!-- ? Preloader Start -->
@@ -70,8 +70,22 @@
                                             <li><a href="{{url('/')}}">Home</a></li>
                                             <li><a href="{{url('/')}}/about">About</a></li>
                                             <li><a href="{{url('/')}}/events">Events</a></li>
-                                            <li><a href="{{url('/')}}/blog">Blog</a></li>
+                                            <li><a href="{{url('/')}}/blogs">Blog</a></li>
                                             <li><a href="{{url('/')}}/contact">Contact</a></li>
+                                            @auth
+                                                <li>
+                                                    <div class="dropdown" style="color:red">
+                                                        <span>Admin</span>
+                                                        <div class="dropdown-options" style="background: white">
+                                                          <a href="{{url('/')}}/blogs/post">Post blog</a>
+                                                          <form action="{{url('/')}}/users/logout" method="post">
+                                                            @csrf
+                                                            <button type="submit" class="btn header-btn">Log out</button>
+                                                        </form>
+                                                        </div>
+                                                      </div>
+                                                </li>
+                                            @endauth
                                         </ul>
                                     </nav>
                                 </div>

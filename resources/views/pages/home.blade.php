@@ -14,8 +14,8 @@
                                 <h1 data-animation="fadeInLeft" data-delay=".5s">A platform where seasoned professionals debate pertinent work-related issues</h1>
                                 <!-- Hero-btn -->
                                 <div class="slider-btns">
-                                    <a data-animation="fadeInLeft" data-delay="1.0s" href="" class="btn hero-btn">Register</a>
-                                    <a data-animation="fadeInRight" data-delay="1.0s" class="popup-video video-btn"  href="https://www.youtube.com/watch?v=76gObZQIPsw&t=83s">
+                                    <a data-animation="fadeInLeft" data-delay="1.0s" href="{{url('/')}}/attendees/register" class="btn hero-btn">Register</a>
+                                    <a data-animation="fadeInRight" data-delay="1.0s" class="popup-video video-btn"  href="https://www.youtube.com/watch?v=IxgzKVqvt5Y">
                                         <i class="fas fa-play"></i></a>
                                     <p class="video-cap d-none d-sm-blcok" data-animation="fadeInRight" data-delay="1.0s">Story Vidoe<br> Watch</p>
                                 </div>

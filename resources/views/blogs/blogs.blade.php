@@ -6,15 +6,21 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mb-5 mb-lg-0">
-                <div class="blog_left_sidebar">
-                    <article class="blog_item">
-                        <div class="blog_details">
-                            <img src="assets/img/logo/logo.png" alt="" width="100%">
-                            <h2>Lorem ipsum dolor sit amet </h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam nisi, commodo eleifend libero at, bibendum varius elit. Vestibulum sed malesuada nulla. Quisque quis odio elit. Duis dictum dapibus vestibulum</p>
-                        </div>
-                    </article>
-                </div>
+                @if (count($blogs) > 0)
+                    @foreach ($blogs as $blog)
+                    <div class="blog_left_sidebar">
+                        <article class="blog_item">
+                            <div class="blog_details">
+                                <img src="{{$blog->pic ? asset('storage/'.$blog->pic):asset('assets/img/logo/logo.jpg')}}" alt="" width="100%">
+                                <h2>{{$blog->title}}</h2>
+                                <p>{{$blog->content}}</p>
+                            </div>
+                        </article>
+                    </div>
+                    @endforeach
+                @else
+                    No blogs found
+                @endif
             </div>
             <div class="col-lg-4">
                 <div class="blog_right_sidebar">

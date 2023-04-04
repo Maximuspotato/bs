@@ -16,9 +16,6 @@ class PagesController extends Controller
     public function events(){
         return view('pages.events')->with('page', 'events');
     }
-    public function blog(){
-        return view('pages.blog')->with('page', 'blog');
-    }
     public function contact(){
         return view('pages.contact')->with('page', 'contact');
     }

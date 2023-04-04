@@ -49,7 +49,7 @@
                                     First Name
                                 </label>
                                 <input type="text" name="fname" placeholder="Enter Your First Name"
-                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Primary color'" required
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Your First Name'" required
                                     class="single-input-primary" />
                                 @error('fname')
                                     <p class="text-red-500">{{$message}}</p>
@@ -60,7 +60,7 @@
                                     Last Name
                                 </label>
                                 <input type="text" name="lname" placeholder="Enter Your Last Name"
-                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Primary color'" required
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Your Last Name'" required
                                     class="single-input-primary" />
                                 @error('lname')
                                     <p class="text-red-500">{{$message}}</p>
@@ -71,23 +71,23 @@
                                     Phone Number
                                 </label>
                                 <input type="text" name="number" placeholder="Enter Your Phone Number"
-                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Primary color'" required
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Your Phone Number'" required
                                     class="single-input-primary" />
+                                @error('number')
+                                    <p class="text-red-500">{{$message}}</p>
+                                @enderror
                             </div>
-                            @error('number')
-                                <p class="text-red-500">{{$message}}</p>
-                            @enderror
                             <div class="mt-10">
                                 <label for="org" class="inline-block text-lg mb-2">
                                     Organization
                                 </label>
                                 <input type="text" name="org" placeholder="Enter Your Organization"
-                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Primary color'" required
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Your Organization'" required
                                     class="single-input-primary" />
+                                @error('org')
+                                    <p class="text-red-500">{{$message}}</p>
+                                @enderror
                             </div>
-                            @error('org')
-                                <p class="text-red-500">{{$message}}</p>
-                            @enderror
                             <div class="mt-10">
                                 <label for="" class="inline-block text-lg mb-2">
                                     Have you paid for the event? 
@@ -100,7 +100,7 @@
                                     MPESA Confirmation Code
                                 </label>
                                 <input type="text" name="code" placeholder="Enter MPESA Confirmation Code you recieved"
-                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Primary color'" 
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter MPESA Confirmation Code you recieved'" 
                                     class="single-input-primary" />
                             </div>
                             <div class="mt-10">
