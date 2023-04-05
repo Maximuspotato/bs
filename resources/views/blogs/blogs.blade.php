@@ -4,6 +4,7 @@
 <x-hero-card :page='$page'/>
 <section class="blog_area section-padding">
     <div class="container">
+        {{-- <h3 class="mb-30">Recent Blogs</h3> --}}
         <div class="row">
             <div class="col-lg-8 mb-5 mb-lg-0">
                 @if (count($blogs) > 0)
@@ -11,13 +12,16 @@
                     <div class="blog_left_sidebar">
                         <article class="blog_item">
                             <div class="blog_details">
-                                <img src="{{$blog->pic ? asset('storage/'.$blog->pic):asset('assets/img/logo/logo.jpg')}}" alt="" width="100%">
-                                <h2>{{$blog->title}}</h2>
+                                <a href="{{url('/')}}/blogs/{{$blog->id}}"><img src="{{$blog->pic ? asset('storage/'.$blog->pic):asset('assets/img/logo/logo.jpg')}}" alt="" width="100%"></a>
+                                <a href="{{url('/')}}/blogs/{{$blog->id}}"><h2>{{$blog->title}}</h2></a>
                                 <p>{{$blog->content}}</p>
                             </div>
                         </article>
                     </div>
                     @endforeach
+                    <div>
+                        {{$blogs->links()}}
+                    </div>
                 @else
                     No blogs found
                 @endif

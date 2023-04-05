@@ -76,12 +76,14 @@
                                                 <li>
                                                     <div class="dropdown" style="color:red">
                                                         <span>Admin</span>
-                                                        <div class="dropdown-options" style="background: white">
-                                                          <a href="{{url('/')}}/blogs/post">Post blog</a>
-                                                          <form action="{{url('/')}}/users/logout" method="post">
-                                                            @csrf
-                                                            <button type="submit" class="btn header-btn">Log out</button>
-                                                        </form>
+                                                        <div class="dropdown-options" style="background: white; opacity: 89%">
+                                                            <a href="{{url('/')}}/events/add">Add Event</a>
+                                                            <a href="{{url('/')}}/attendees/all">Attendees</a>
+                                                            <a href="{{url('/')}}/blogs/post">Post blog</a>
+                                                            <form action="{{url('/')}}/users/logout" method="post">
+                                                                @csrf
+                                                                <button type="submit" class="btn header-btn" style="opacity:89%">Log out</button>
+                                                            </form>
                                                         </div>
                                                       </div>
                                                 </li>
@@ -143,10 +145,10 @@
                         <div class="footer-tittle">
                             <h4>Important Links</h4>
                             <ul>
-                                <li><a href="#"> About us</a></li>
-                                <li><a href="#">Events</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Contact us</a></li>
+                                <li><a href="{{url('/')}}/about">About Us</a></li>
+                                <li><a href="{{url('/')}}/events">Events</a></li>
+                                <li><a href="{{url('/')}}/blogs">Blog</a></li>
+                                <li><a href="{{url('/')}}/contact">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>

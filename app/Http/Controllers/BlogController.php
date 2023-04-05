@@ -27,6 +27,39 @@ class BlogController extends Controller
         return redirect('/blogs')->with('message', 'Blog added succesfully');
     }
     public function blogs(){
-        return view('blogs.blogs', ['blogs' => Blog::latest()->paginate(10)])->with('page', 'blog');
+        return view('blogs.blogs', ['blogs' => Blog::latest()->simplePaginate(10)])->with('page', 'blog');
+    }
+
+    public function show(Blog $blog){
+        return view('blogs.show', [
+            'blog' => $blog
+        ]);
+    }
+
+    public function edit(Blog $blog){
+        return view('blogs.edit', [
+            'blog' => $blog
+        ]);
+    }
+
+    public function update(Request $request, Blog $blog){
+        $formFields = $request->validate([
+            'title' => 'required',
+            'pic' => 'image|mimes:jpeg,png,jpg,JPEG,PNG,JPG',
+            'content' => 'required'
+        ]);
+
+        if ($request->hasFile('pic')) {
+            $formFields['pic'] = $request->file('pic')->store('pics', 'public');
+        }
+
+        $blog->update($formFields);
+
+        return back()->with('message', 'Blog updated succesfully');
+    }
+
+    public function delete(Blog $blog){
+        $blog->delete();
+        return redirect('/blogs')->with('message', 'Blog deleted successfully');
     }
 }
