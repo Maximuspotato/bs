@@ -76,10 +76,18 @@
                 <div class="col-lg-6 col-md-12">
                     <div class="about-caption mb-50">
                         <!-- Section Tittle -->
-                        <div class="section-tittle mb-35">
+                        @if (isset($event))
+                            <div class="section-tittle mb-35">
+                            <h2>{{$event->title}}</h2>
+                        </div>
+                        <p>{{$event->description}}</p>
+                        @else
+                           <div class="section-tittle mb-35">
                             <h2>The Biggest Workplace Debates</h2>
                         </div>
-                        <p>A platform where seasoned professionals debate pertinent work-related issues that enable participants to gain broader perspectives and insights that could find useful application in their professional and personal lives</p>
+                        <p>A platform where seasoned professionals debate pertinent work-related issues that enable participants to gain broader perspectives and insights that could find useful application in their professional and personal lives</p> 
+                        @endif
+                        
                     </div>
                     @if (isset($event))
                     <div class="row">

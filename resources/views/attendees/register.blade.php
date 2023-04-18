@@ -6,12 +6,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12">
+                    @if (isset($event))
                     <div class="about-caption mb-50">
                         <!-- Section Tittle -->
                         <div class="section-tittle mb-35">
-                            <h2>Upcoming event</h2>
+                            <h2>{{$event->title}}</h2>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam nisi, commodo eleifend libero at, bibendum varius elit. Vestibulum sed malesuada nulla. Quisque quis odio elit. Duis dictum dapibus vestibulum</p>
+                        <p>{{$event->description}}</p>
+                        @if (isset($event->pic))
+                            <img src="{{asset('storage/'.$event->pic)}}" alt="">
+                        @endif
                     </div>
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-10">
@@ -36,7 +40,16 @@
                                 </div>
                             </div>
                         </div>
+                        @if (isset($event->link))
+                            <iframe width="100%" 
+                            src="{{$event->link}}">
+                            </iframe>
+                        @endif
+                        <p>Mpesa till no: <b>9267817</b></p>
                     </div>
+                    @else
+                    No upcoming event
+                    @endif
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <!-- about-img -->

@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Exports\AttendeesExport;
+use App\Models\Event;
 use App\Models\Attendee;
 use Illuminate\Http\Request;
+use App\Exports\AttendeesExport;
 use Maatwebsite\Excel\Facades\Excel;
 
 class AttendeesController extends Controller
 {
     public function register(){
-        return view('attendees.register')->with('page', 'register');
+        return view('attendees.register', ['event'=>Event::latest()->first()])->with('page', 'register');
     }
 
     public function store(Request $request){
