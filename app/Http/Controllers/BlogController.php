@@ -26,8 +26,8 @@ class BlogController extends Controller
 
         return redirect('/blogs')->with('message', 'Blog added succesfully');
     }
-    public function blogs(){
-        return view('blogs.blogs', ['blogs' => Blog::latest()->simplePaginate(10)])->with('page', 'blog');
+    public function gallery(){
+        return view('blogs.blogs', ['blogs' => Blog::latest()->simplePaginate(10)])->with('page', 'gallery');
     }
 
     public function show(Blog $blog){

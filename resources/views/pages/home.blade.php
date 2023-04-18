@@ -10,7 +10,7 @@
                     <div class="row">
                         <div class="col-xl-8 col-lg-8 col-md-9 col-sm-10">
                             <div class="hero__caption">
-                                <span data-animation="fadeInLeft" data-delay=".1s">Committed to broadening perspectives and insights</span>
+                                {{-- <span data-animation="fadeInLeft" data-delay=".1s">Committed to broadening perspectives and insights</span> --}}
                                 <h1 data-animation="fadeInLeft" data-delay=".5s">A platform where seasoned professionals debate pertinent work-related issues</h1>
                                 <!-- Hero-btn -->
                                 <div class="slider-btns">
@@ -34,7 +34,7 @@
                                 <h1 data-animation="fadeInLeft" data-delay=".5s">Digital Conference For Designers</h1>
                                 <!-- Hero-btn -->
                                 <div class="slider-btns">
-                                    <a data-animation="fadeInLeft" data-delay="1.0s" href="industries.html" class="btn hero-btn">Download</a>
+                                    {{-- <a data-animation="fadeInLeft" data-delay="1.0s" href="industries.html" class="btn hero-btn">Download</a> --}}
                                     <a data-animation="fadeInRight" data-delay="1.0s" class="popup-video video-btn"  href="https://www.youtube.com/watch?v=up68UAfH0d0">
                                         <i class="fas fa-play"></i></a>
                                     <p class="video-cap d-none d-sm-blcok" data-animation="fadeInRight" data-delay="1.0s">Story Vidoe<br> Watch</p>
@@ -115,7 +115,7 @@
                         </div>
                     </div>                    
                     @endif
-                    <a href="#" class="btn mt-50">Register</a>
+                    <a href="{{url('/')}}/attendees/register" class="btn mt-50">Reserve a seat</a>
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <!-- about-img -->

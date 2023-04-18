@@ -10,8 +10,8 @@
                                 About Us
                             @elseif ($page == 'events')
                                 Events
-                            @elseif ($page == 'blog')
-                                Blog
+                            @elseif ($page == 'gallery')
+                                Gallery
                             @elseif ($page == 'contact')
                                 Contact
                             @elseif ($page == 'register')

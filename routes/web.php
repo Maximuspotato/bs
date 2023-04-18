@@ -36,7 +36,7 @@ Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 Route::post('/users/logout', [UserController::class, 'logout']);
 
 Route::get('/blogs/post', [BlogController::class, 'post'])->middleware('auth');
-Route::get('/blogs', [BlogController::class, 'blogs']);
+Route::get('/gallery', [BlogController::class, 'gallery']);
 Route::post('/blogs', [BlogController::class, 'store'])->middleware('auth');
 Route::get('/blogs/{blog}', [BlogController::class, 'show']);
 Route::get('/blogs/{blog}/edit', [BlogController::class, 'edit'])->middleware('auth');

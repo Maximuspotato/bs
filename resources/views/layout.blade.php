@@ -58,7 +58,7 @@
                         <!-- Logo -->
                         <div class="col-xl-2 col-lg-2 col-md-1">
                             <div class="logo">
-                                <a href="{{url('/')}}"><img src="{{url('/')}}/assets/img/logo/logo.png" alt="" width="300" height="80"></a>
+                                <a href="{{url('/')}}"><img src="{{url('/')}}/assets/img/logo/logo.png" alt="" width="300" height="105"></a>
                             </div>
                         </div>
                         <div class="col-xl-10 col-lg-10 col-md-10">
@@ -70,8 +70,8 @@
                                             <li><a href="{{url('/')}}">Home</a></li>
                                             <li><a href="{{url('/')}}/about">About</a></li>
                                             <li><a href="{{url('/')}}/events">Events</a></li>
-                                            <li><a href="{{url('/')}}/blogs">Blog</a></li>
-                                            <li><a href="{{url('/')}}/contact">Contact</a></li>
+                                            <li><a href="{{url('/')}}/gallery">Gallery</a></li>
+                                            <li><a href="{{url('/')}}/contact">Contact Us</a></li>
                                             @auth
                                                 <li>
                                                     <div class="dropdown" style="color:red">
@@ -92,7 +92,7 @@
                                     </nav>
                                 </div>
                                 <div class="header-right-btn f-right d-none d-lg-block ml-30">
-                                    <a href="{{url('/')}}/attendees/register" class="btn header-btn">Register</a>
+                                    <a href="{{url('/')}}/attendees/register" class="btn header-btn">Join Us</a>
                                 </div>
                             </div>
                         </div>   
@@ -147,7 +147,7 @@
                             <ul>
                                 <li><a href="{{url('/')}}/about">About Us</a></li>
                                 <li><a href="{{url('/')}}/events">Events</a></li>
-                                <li><a href="{{url('/')}}/blogs">Blog</a></li>
+                                <li><a href="{{url('/')}}/gallery">Gallery</a></li>
                                 <li><a href="{{url('/')}}/contact">Contact Us</a></li>
                             </ul>
                         </div>

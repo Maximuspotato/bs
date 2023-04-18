@@ -14,7 +14,7 @@
                         </div>
                         <p>{{$event->description}}</p>
                         @if (isset($event->pic))
-                            <img src="{{asset('storage/'.$event->pic)}}" alt="">
+                            <img src="{{asset('storage/'.$event->pic)}}" width="100%" alt="">
                         @endif
                     </div>
                     <div class="row">
@@ -25,7 +25,7 @@
                                 </div>
                                 <div class="caption">
                                     <h5>Where</h5>
-                                    <p>Nairobi, Kenya</p>
+                                    <p>{{$event->location}}</p>
                                 </div>
                             </div>
                         </div>
@@ -36,17 +36,30 @@
                                 </div>
                                 <div class="caption">
                                     <h5>When</h5>
-                                    <p>Apr. 14. 2022</p>
+                                    @php
+                                       $date = new DateTime($event->date);
+                                    @endphp
+                                    <p>{{date_format($date, 'M/d/Y')}}</p>
                                 </div>
                             </div>
                         </div>
                         @if (isset($event->link))
-                            <iframe width="100%" 
-                            src="{{$event->link}}">
-                            </iframe>
+                        <div class="hero__caption">
+                            <!-- Hero-btn -->
+                            <div class="slider-btns">
+                                {{-- <a data-animation="fadeInLeft" data-delay="1.0s" href="industries.html" class="btn hero-btn">Download</a> --}}
+                                <a data-animation="fadeInRight" data-delay="1.0s" class="popup-video video-btn"  href="{{$event->link}}">
+                                    <i class="fas fa-play" style="color: red;
+                                    border: solid;
+                                    padding: 10px;"> Video link</i></a>
+                                <p class="video-cap d-none d-sm-blcok" data-animation="fadeInRight" data-delay="1.0s">Story Vidoe<br> Watch</p>
+                            </div>
+                        </div>
+                        <br>
                         @endif
-                        <p>Mpesa till no: <b>9267817</b></p>
                     </div>
+                    <br>
+                    <p>Mpesa till no: <b>9267817</b></p>
                     @else
                     No upcoming event
                     @endif
