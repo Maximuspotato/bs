@@ -122,15 +122,15 @@
                                 <label for="paid">Yes</label>
                             </div>
                             <div class="mt-10" id="mpesa">
-                                <label for="code" class="inline-block text-lg mb-2">
+                                <label for="mpesa" class="inline-block text-lg mb-2">
                                     MPESA Confirmation Code
                                 </label>
-                                <input type="text" name="code" placeholder="Enter MPESA Confirmation Code you recieved"
+                                <input type="text" name="mpesa" placeholder="Enter MPESA Confirmation Code you recieved"
                                     onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter MPESA Confirmation Code you recieved'" 
                                     class="single-input-primary" />
                             </div>
                             <div class="mt-10">
-                                <input type="submit" name="code" class="btn header-btn" value="Register" style="background: #005E6D"/>
+                                <input type="submit" class="btn header-btn" value="Register" style="background: #005E6D"/>
                             </div>
                         </form>
                     </div>

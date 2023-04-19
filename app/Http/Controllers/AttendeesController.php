@@ -15,12 +15,18 @@ class AttendeesController extends Controller
     }
 
     public function store(Request $request){
+
         $formFields = $request->validate([
             'fname' => 'required',
             'lname' => 'required',
             'number' => 'required',
             'org' => 'required',
         ]);
+
+        if (isset($request->mpesa)) {
+            $formFields['mpesa'] = $request['mpesa'];
+        }
+        //dd($formFields);
 
         Attendee::create($formFields);
 
