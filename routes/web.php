@@ -35,13 +35,13 @@ Route::get('/users/login', [UserController::class, 'login']);
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 Route::post('/users/logout', [UserController::class, 'logout']);
 
-Route::get('/blogs/post', [BlogController::class, 'post'])->middleware('auth');
+Route::get('/gallery/post', [BlogController::class, 'post'])->middleware('auth');
 Route::get('/gallery', [BlogController::class, 'gallery']);
-Route::post('/blogs', [BlogController::class, 'store'])->middleware('auth');
-Route::get('/blogs/{blog}', [BlogController::class, 'show']);
-Route::get('/blogs/{blog}/edit', [BlogController::class, 'edit'])->middleware('auth');
-Route::put('/blogs/{blog}', [BlogController::class, 'update'])->middleware('auth');
-Route::delete('/blogs/{blog}', [BlogController::class, 'delete'])->middleware('auth');
+Route::post('/gallery', [BlogController::class, 'store'])->middleware('auth');
+Route::get('/gallery/{blog}', [BlogController::class, 'show']);
+Route::get('/gallery/{blog}/edit', [BlogController::class, 'edit'])->middleware('auth');
+Route::put('/gallery/{blog}', [BlogController::class, 'update'])->middleware('auth');
+Route::delete('/gallery/{blog}', [BlogController::class, 'delete'])->middleware('auth');
 
 Route::get('/events/add', [EventController::class, 'add'])->middleware('auth');
 Route::post('/events', [EventController::class, 'store'])->middleware('auth');

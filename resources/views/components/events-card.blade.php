@@ -172,7 +172,7 @@
                                         </div>
                                     </div><br>
                                     <div class="header-right-btn f-right d-none d-lg-block ml-30">
-                                        <a href="events.html" class="btn header-btn">See More</a>
+                                        <a href="{{url('/')}}/events" class="btn header-btn">See More</a>
                                     </div>
                                 </div>
                             </div>

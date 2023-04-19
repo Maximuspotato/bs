@@ -12,7 +12,7 @@
                         <div class="section-tittle mb-35">
                             <h2>{{$event->title}}</h2>
                         </div>
-                        <p>{{$event->description}}</p>
+                        <p>{!!$event->description!!}</p>
                         @if (isset($event->pic))
                             <img src="{{asset('storage/'.$event->pic)}}" width="100%" alt="">
                         @endif

@@ -12,9 +12,12 @@
                     <div class="blog_left_sidebar">
                         <article class="blog_item">
                             <div class="blog_details">
-                                <a href="{{url('/')}}/blogs/{{$blog->id}}"><img src="{{$blog->pic ? asset('storage/'.$blog->pic):asset('assets/img/logo/logo.jpg')}}" alt="" width="100%"></a>
-                                <a href="{{url('/')}}/blogs/{{$blog->id}}"><h2>{{$blog->title}}</h2></a>
-                                <p>{{$blog->content}}</p>
+                                <a href="{{url('/')}}/gallery/{{$blog->id}}"><img src="{{$blog->pic ? asset('storage/'.$blog->pic):asset('assets/img/logo/logo.jpg')}}" alt="" width="100%"></a>
+                                <a href="{{url('/')}}/gallery/{{$blog->id}}"><h2>{{$blog->title}}</h2></a>
+                                <div style="margin-bottom: 30px;
+                                height: 80px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;">{!!$blog->content!!}</div>
                             </div>
                         </article>
                     </div>

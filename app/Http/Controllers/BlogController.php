@@ -24,7 +24,7 @@ class BlogController extends Controller
 
         Blog::create($formFields);
 
-        return redirect('/blogs')->with('message', 'Blog added succesfully');
+        return redirect('/gallery')->with('message', 'Blog added succesfully');
     }
     public function gallery(){
         return view('blogs.blogs', ['blogs' => Blog::latest()->simplePaginate(10)])->with('page', 'gallery');
@@ -60,6 +60,6 @@ class BlogController extends Controller
 
     public function delete(Blog $blog){
         $blog->delete();
-        return redirect('/blogs')->with('message', 'Blog deleted successfully');
+        return redirect('/gallery')->with('message', 'Blog deleted successfully');
     }
 }

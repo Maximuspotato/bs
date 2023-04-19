@@ -14,7 +14,7 @@
                                 <h1 data-animation="fadeInLeft" data-delay=".5s">A platform where seasoned professionals debate pertinent work-related issues</h1>
                                 <!-- Hero-btn -->
                                 <div class="slider-btns">
-                                    <a data-animation="fadeInLeft" data-delay="1.0s" href="{{url('/')}}/attendees/register" class="btn hero-btn">Register</a>
+                                    <a data-animation="fadeInLeft" data-delay="1.0s" href="{{url('/')}}/attendees/register" class="btn hero-btn">Join Us</a>
                                     <a data-animation="fadeInRight" data-delay="1.0s" class="popup-video video-btn"  href="{{(isset($event)>0) ? (!empty($event->link)?$event->link:'https://www.youtube.com/watch?v=IxgzKVqvt5Y'): 'https://www.youtube.com/watch?v=IxgzKVqvt5Y'}}">
                                         <i class="fas fa-play"></i></a>
                                     <p class="video-cap d-none d-sm-blcok" data-animation="fadeInRight" data-delay="1.0s">Story Vidoe<br> Watch</p>
@@ -64,6 +64,34 @@
                     @endif
                     <p>Days</p>
                 </div>
+                <div class="cd-item">
+                    @if (isset($event))
+                        @php
+                            $date = new DateTime($event->date);
+                            $now = new DateTime(date('y-m-d h:i:s'));
+                            $interval = $date->diff($now);
+                            $hours = $interval->format('%H')
+                        @endphp
+                        <span>{{$hours}}</span>
+                    @else
+                        <span>00</span>
+                    @endif
+                    <p>Hours</p>
+                </div>
+                <div class="cd-item">
+                    @if (isset($event))
+                        @php
+                            $date = new DateTime($event->date);
+                            $now = new DateTime(date('y-m-d h:i:s'));
+                            $interval = $date->diff($now);
+                            $mins = $interval->format('%I')
+                        @endphp
+                        <span>{{$mins}}</span>
+                    @else
+                        <span>00</span>
+                    @endif
+                    <p>Minutes</p>
+                </div>
             </div>
         </div>
         <!-- Counter Section End -->
@@ -80,7 +108,7 @@
                             <div class="section-tittle mb-35">
                             <h2>{{$event->title}}</h2>
                         </div>
-                        <p>{{$event->description}}</p>
+                        <p>{!!$event->description!!}</p>
                         @else
                            <div class="section-tittle mb-35">
                             <h2>The Biggest Workplace Debates</h2>

@@ -7,7 +7,7 @@
             <!-- about-img -->
             <div class=" ">
                 <h3 class="mb-30">Add an event</h3>
-                <form method="POST" action="{{url('/')}}/events" enctype="multipart/form-data">
+                <form id="my_form" method="POST" action="{{url('/')}}/events" enctype="multipart/form-data">
                     @csrf
                     <div class="mt-10">
                         <label for="title" class="inline-block text-lg mb-2">
@@ -34,9 +34,13 @@
                         <label for="description" class="inline-block text-lg mb-2">
                             Description
                         </label>
-                        <textarea name="description" placeholder="Enter Your Description"
+                        {{-- <textarea name="description" placeholder="Enter Your Description"
                             onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Your Description'" required
-                            class="single-input-primary"></textarea>
+                            class="single-input-primary"></textarea> --}}
+                        <div id="fake_textarea" placeholder="Enter Your Description"
+                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Your Description'" required
+                        class="single-input-primary" contenteditable></div>
+                        <input type="hidden" id="fake_textarea_content" name="description" required>
                         @error('description')
                             <p class="text-red-500">{{$message}}</p>
                         @enderror
@@ -67,7 +71,7 @@
                         <label for="date" class="inline-block text-lg mb-2">
                             Date
                         </label>
-                        <input type="date" name="date"
+                        <input type="datetime-local" name="date"
                             class="single-input-primary" />
                         @error('date')
                             <p class="text-red-500">{{$message}}</p>

@@ -6,7 +6,7 @@
             <!-- about-img -->
             <div class=" ">
                 <h3 class="mb-30">Edit blog</h3>
-                <form method="POST" action="{{url('/')}}/blogs/{{$blog->id}}" enctype="multipart/form-data">
+                <form id="my_form" method="POST" action="{{url('/')}}/gallery/{{$blog->id}}" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                         <label for="title" class="inline-block text-lg mb-2">
@@ -33,9 +33,10 @@
                         <label for="content" class="inline-block text-lg mb-2">
                             Content
                         </label>
-                        <textarea name="content" placeholder="Enter Your Content"
-                            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Your Content'" required
-                            class="single-input-primary">{{$blog->content}}</textarea>
+                        <div id="fake_textarea" placeholder="Enter Your Content"
+                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Your Content'" required
+                        class="single-input-primary" contenteditable>{!!$blog->content!!}</div>
+                        <input type="hidden" id="fake_textarea_content" name="content" required>
                         @error('content')
                             <p class="text-red-500">{{$message}}</p>
                         @enderror

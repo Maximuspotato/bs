@@ -79,7 +79,7 @@
                                                         <div class="dropdown-options" style="background: white; opacity: 89%">
                                                             <a href="{{url('/')}}/events/add">Add Event</a>
                                                             <a href="{{url('/')}}/attendees/all">Attendees</a>
-                                                            <a href="{{url('/')}}/blogs/post">Post blog</a>
+                                                            <a href="{{url('/')}}/gallery/post">Post blog</a>
                                                             <form action="{{url('/')}}/users/logout" method="post">
                                                                 @csrf
                                                                 <button type="submit" class="btn header-btn" style="opacity:89%">Log out</button>

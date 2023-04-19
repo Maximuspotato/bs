@@ -1,5 +1,15 @@
 (function ($)
   { "use strict"
+
+  $(document).on('submit','#my_form',function(){
+    $('#fake_textarea_content').val($('#fake_textarea').html());
+  });
+
+  // $('#my_form').submit(function()
+  // {
+  //   alert('yo');
+  //   $('#fake_textarea_content').val($('#fake_textarea').html());
+  // });
   
 /* 1. Proloder */
     $(window).on('load', function () {
